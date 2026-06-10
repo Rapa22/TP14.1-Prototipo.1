@@ -20,6 +20,11 @@ public class InteractiveArea : MonoBehaviour
             score++;
             uiManager.UpdateScore(score);
             Destroy(other.gameObject);
+             if (score == 3)
+            {
+                uiManager.MostrarPantallaWin();
+                Time.timeScale = 0;
+            }
         }
     }
 
