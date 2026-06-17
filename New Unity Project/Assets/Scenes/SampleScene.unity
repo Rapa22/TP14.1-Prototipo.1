@@ -891,6 +891,9 @@ MonoBehaviour:
   timer: {fileID: 1497838583}
   winPanel: {fileID: 420342322}
   gameOverPanel: {fileID: 738488715}
+  uiManager: {fileID: 1643307649}
+  juegoTerminado: 0
+  Score: 0
 --- !u!1 &701651268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1036,6 @@ MonoBehaviour:
   timer: 60
   uiManager: {fileID: 1643307649}
   juegoTerminado: 0
-  score: 0
 --- !u!1 &738488715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1090,9 @@ MonoBehaviour:
   timer: {fileID: 1497838583}
   winPanel: {fileID: 420342322}
   gameOverPanel: {fileID: 738488715}
+  uiManager: {fileID: 420342324}
+  juegoTerminado: 0
+  Score: 0
 --- !u!1 &759788867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,11 +1868,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a97e62d172ac94f914764c21e714cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  win: {fileID: 0}
+  win: {fileID: 42980537}
   score: {fileID: 2059322246}
   timer: {fileID: 1497838583}
   winPanel: {fileID: 420342322}
   gameOverPanel: {fileID: 738488715}
+  uiManager: {fileID: 1643307649}
+  juegoTerminado: 0
+  Score: 0
 --- !u!4 &1663448186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8301348219256438975, guid: d23a71d629ca2cb428e58efdcf5d4c1b,

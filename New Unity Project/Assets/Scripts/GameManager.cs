@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public float timer = 60f;
     public UIManager uiManager;
     public bool juegoTerminado;
-    public int score = 0;
+    
 
     
 
@@ -29,13 +29,7 @@ public class GameManager : MonoBehaviour
             uiManager.MostrarPantallaGameOver();
             Time.timeScale = 0;
         }
-         if (score == 3)
-         {
-            juegoTerminado = true;
-            uiManager.MostrarPantallaWin();
-            Time.timeScale = 0;
-         }
-
+         
         if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

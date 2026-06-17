@@ -13,7 +13,7 @@ public class InteractiveArea : MonoBehaviour
         uiManager = FindObjectOfType<UIManager>();
     }
 
-   void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Collectible"))
         {
