@@ -44,15 +44,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Score == 3)
-         {
-            juegoTerminado = true;
-            uiManager.MostrarPantallaWin();
-            Time.timeScale = 0;
-         }
-         if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+    
     }
 }
