@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractiveArea : MonoBehaviour
 {
     public int score = 0;
-    
+    public bool juegoTerminado;
     private UIManager uiManager;
 
     void Awake()
@@ -20,11 +21,6 @@ public class InteractiveArea : MonoBehaviour
             score++;
             uiManager.UpdateScore(score);
             Destroy(other.gameObject);
-             if (score == 3)
-            {
-                uiManager.MostrarPantallaWin();
-                Time.timeScale = 0;
-            }
         }
     }
 
@@ -37,6 +33,15 @@ public class InteractiveArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         if (score == 3)
+            {
+                juegoTerminado = true;
+                uiManager.MostrarPantallaWin();
+                Time.timeScale = 0;
+            }
+            if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
